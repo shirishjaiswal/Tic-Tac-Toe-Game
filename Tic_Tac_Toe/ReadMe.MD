@@ -2,7 +2,9 @@
 
 ## About 	:
 		This Project is a game that we have played in childhood.
-		If any one player achieves 'X' or 'O' in contineous cells of either any row, column, or diagonal.
+		This game involves two players.
+		Each player has to choose the element either 'X' or 'O'. If first chooses 'X' then automatically another one has to choose 'O'.
+		If any of the player achieves his element in all contineous cells of either any row, column or diagonal.
 		That player wins.
 ## Feature	:
 		Two Player can play the Game
