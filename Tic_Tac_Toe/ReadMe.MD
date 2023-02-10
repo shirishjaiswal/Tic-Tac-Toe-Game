@@ -3,7 +3,8 @@
 ## About 	:
 		This Project is a game that we have played in childhood.
 		This game involves two players.
-		Each player has to choose the element either 'X' or 'O'. If first chooses 'X' then automatically another one has to choose 'O'.
+		Each player has to choose the element either 'X' or 'O'.
+		If first player chooses 'X' then automatically another player has to choose 'O'.
 		If any of the player achieves his element in all contineous cells of either any row, column or diagonal.
 		That player wins.
 ## Feature	:
