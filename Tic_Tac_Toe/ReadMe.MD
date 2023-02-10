@@ -6,7 +6,7 @@
 		That player wins.
 ## Feature	:
 		Two Player can play the Game
-		He can play with the COMPUTER.
+		Player can also play solely with the COMPUTER.
 ## Outcome	:
 		While creating this Project I have learned and implemented the concepts of
 		-	OOPs
