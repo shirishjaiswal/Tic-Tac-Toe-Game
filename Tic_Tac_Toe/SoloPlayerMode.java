@@ -22,17 +22,17 @@ public class SoloPlayerMode {
 	
 	private void setCornorMidElements() {
 		int n = board.getBoardLength()-1;
-        cornorElement = new ArrayList<>();
-        cornorElement.add("00");
-        String s = "0"+n;
-        cornorElement.add(s);
-        s = n + "0";
-        cornorElement.add(s);
-        s = n+""+n;
-        cornorElement.add(s);
-        int midIdx = board.getBoardLength()/2+1;
-        String mid = midIdx +""+midIdx;
-        cornorElement.add(mid);
+		cornorElement = new ArrayList<>();
+		cornorElement.add("00");
+		String s = "0"+n;
+		cornorElement.add(s);
+		s = n + "0";
+		cornorElement.add(s);
+		s = n+""+n;
+		cornorElement.add(s);
+		int midIdx = board.getBoardLength()/2+1;
+		String mid = midIdx +""+midIdx;
+		cornorElement.add(mid);
 	}
 	
 	public ArrayList<String> startGame () {
