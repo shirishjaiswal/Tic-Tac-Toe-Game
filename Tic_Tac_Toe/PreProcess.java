@@ -28,7 +28,7 @@ public class PreProcess {
 		while (!isValid) {
 			System.out.print("In which mode you want to play :\t");
 			inMode = sc.next().toUpperCase();
-			if(inMode.equals("3") || inMode.equals("EXIT")) launch();
+			if(inMode.equals("3") || inMode.equals("EXIT")) return;
 			try {
 				mode = Integer.parseInt(inMode);
 				if (mode == 1 || mode == 2) {
