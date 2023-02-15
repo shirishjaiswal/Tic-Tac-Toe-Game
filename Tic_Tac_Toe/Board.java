@@ -18,7 +18,6 @@ public class Board {
 			System.out.println("Sorry more the board size You get bored of playing\nSelect from 3 and 5");
 			setSizeTry();
 		}
-		System.out.println("\nBOARD SIZE : " + this.boardSize +" * "+ this.boardSize + "\n");
 		createBoard();
 	}
 	public void setSizeTry () {
