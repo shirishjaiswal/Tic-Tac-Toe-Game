@@ -52,7 +52,7 @@ public class PreProcess {
 	private void setBoardAndGameRules () {
 		board = new Board();
 		board.setBoardSize();
-		System.out.println("\nBOARD SIZE : " + this.boardSize +" * "+ this.boardSize + "\n");
+		System.out.println("\nBOARD SIZE : " + board.getBoardLength() +" * "+ board.getBoardLength() + "\n");
 		System.out.println("Lets Start The Game");
 		System.out.println("\nRule 1 : Each two digit number means a cell \n"
 				+ "Rule 2 : Enter that number where you want to place your tool\n"
