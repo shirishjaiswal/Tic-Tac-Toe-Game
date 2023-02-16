@@ -5,7 +5,7 @@
 - This is developed in Java, using OOPs, such as classes and objects. The game was designed to be user-friendly, with clear instructions.
 - Exception handling was implemented to catch and handle any errors or exceptions that might occur during the game. This added a level of robustness and ensured a smooth and seamless gaming experience for the users.
 ## Feature	:
-- Board Size 3*3 and 5*5
+- Board Size 3×3 and 5×5
 -	Two Player can play the Game
 -	Player can also play solely with the COMPUTER.
 ## Outcome	:
