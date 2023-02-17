@@ -2,11 +2,12 @@ package com.project1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 //creating board and its behavior to perform actions
 public class Board {
-	public static Scanner sc = new Scanner (System.in);
-	private int boardSize = 3;
+	Scanner sc = new Scanner (System.in);
+	private int boardSize;
 	private String [][] board;
 	private ArrayList<String> availabeIdx;
 	
@@ -20,6 +21,7 @@ public class Board {
 		}
 		createBoard();
 	}
+	
 	public void setSizeTry () {
 		try {
 			this.boardSize = sc.nextInt();
@@ -62,7 +64,7 @@ public class Board {
 			System.out.println();
 		}
 	}
-	public ArrayList availabeIdx() {
+	public ArrayList<String> availabeIdx() {
 		return this.availabeIdx;
 	}
 	
