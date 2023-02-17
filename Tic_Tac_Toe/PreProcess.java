@@ -1,6 +1,7 @@
 package com.project1;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PreProcess {
@@ -20,7 +21,6 @@ public class PreProcess {
 		System.out.println("1\t-\tSolo Playing");
 		System.out.println("2\t-\tTwo-Player");
 		System.out.println("3\t-\tExit\n");
-		
 		
 		String inMode;
 		boolean isValid = false;
@@ -79,7 +79,6 @@ public class PreProcess {
 			System.out.println();
 		}
 		setBoardAndGameRules();
-		
 		SoloPlayerMode gameInitialize = new SoloPlayerMode();
 		gameInitialize.setBoard(board);
 		gameInitialize.setPlayer(playerList);
@@ -116,6 +115,7 @@ public class PreProcess {
 			playerList[i] = p1;
 			System.out.println();
 		}
+		
 		setBoardAndGameRules();
 		
 		TwoPlayerMode gameInitialize = new TwoPlayerMode();
