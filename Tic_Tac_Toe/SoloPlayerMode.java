@@ -4,20 +4,14 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class SoloPlayerMode {
-	public static Scanner sc = new Scanner (System.in);
-	private Board board;
-	private Players [] player;
-	private ArrayList<String> availabeIdx;
-	private ArrayList<String> decisionList;
+public class SoloPlayerMode extends TwoPlayerMode{
 	private ArrayList<String> midCornorElement;
-	private Random rand; 
-	public void setBoard (Board board) {
-		this.board = board;
-	}
-
-	void setPlayer (Players [] player) {
-		this.player = player;
+	
+	public ArrayList<String> startGame () {
+		//Injecting value of available cells that are not occupied
+		availabeIdx = board.availabeIdx();
+		setCornorMidElements();
+		return run();
 	}
 	
 	private void setCornorMidElements() {
@@ -32,13 +26,6 @@ public class SoloPlayerMode {
         midCornorElement.add(s);
         s = (n/2) +""+(n/2);
         midCornorElement.add(s);
-	}
-	
-	public ArrayList<String> startGame () {
-		//Injecting value of available cells that are not occupied
-		availabeIdx = board.availabeIdx();
-		setCornorMidElements();
-		return run();
 	}
 	
 	private ArrayList<String> run() {
@@ -82,24 +69,12 @@ public class SoloPlayerMode {
 					break;
 				}
 			}
-			int iIdx = (idx.charAt(0) - '0');
-			int jIdx = (idx.charAt(1) - '0');
-			board.setBoardElement(iIdx, jIdx, playerElement);
-			board.displayBoard();
-			System.out.println();
-			if(board.checkWin(iIdx, jIdx, playerElement)) {
-				decisionList.add(playerName);
-				decisionList.add(playerElement);
-				return decisionList;
-			}
-			else if (board.checkDraw ()) {
-				decisionList.add("DRAW");
-				return decisionList;
-			}
+			decisionList = makeDecision(idx, playerName, playerElement); 
+			if (!decisionList.isEmpty()) return decisionList;
 		}
 	}
 	
-	public String computerElement(String computrElement, String userElement){
+	private String computerElement(String computrElement, String userElement){
 		Random computerHit = new Random();
 		String [] ele = {computrElement, userElement};
         for (int i = 0; i < 2; i++) {
