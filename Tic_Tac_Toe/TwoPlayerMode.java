@@ -5,12 +5,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TwoPlayerMode {
-	public static Scanner sc = new Scanner (System.in);
-	private Board board;
-	private Players [] player;
-	private ArrayList<String> availabeIdx;
-	private ArrayList<String> decisionList; //for making decision win or not
-	private Random rand; 
+	protected static Scanner sc = new Scanner (System.in);
+	protected Board board;
+	protected Players [] player;
+	protected ArrayList<String> availabeIdx;
+	protected ArrayList<String> decisionList; //for making decision win or not
+	protected Random rand; 
 	
 	public void setBoard (Board board) {
 		this.board = board;
@@ -33,6 +33,7 @@ public class TwoPlayerMode {
 		int playerIndex = rand.nextInt(2);
 		String playerName;
 		String playerElement;
+		System.out.println("--  START  --");
 		board.displayBoard();
 		System.out.println();
 		while (true) {
@@ -56,20 +57,28 @@ public class TwoPlayerMode {
 					break;
 				}
 			}
-			int iIdx = (idx.charAt(0) - '0');
-			int jIdx = (idx.charAt(1) - '0');
-			board.setBoardElement(iIdx, jIdx, playerElement);
-			board.displayBoard();
-			System.out.println();
-			if(board.checkWin(iIdx, jIdx, playerElement)) {
-				decisionList.add(playerName);
-				decisionList.add(playerElement);
-				return decisionList;
-			}
-			else if (board.checkDraw ()) {
-				decisionList.add("DRAW");
-				return decisionList;
-			}
+			decisionList = makeDecision(idx, playerName, playerElement); 
+			if (!decisionList.isEmpty()) return decisionList;
 		}
+	}
+	protected ArrayList<String> makeDecision(String idx, String playerName, String playerElement) {
+		int iIdx = (idx.charAt(0) - '0');
+		int jIdx = (idx.charAt(1) - '0');
+		board.setBoardElement(iIdx, jIdx, playerElement);
+		board.displayBoard();
+		System.out.println();
+		if(board.checkWin(iIdx, jIdx, playerElement)) {
+			return new ArrayList<String>() {{
+				add(playerName);
+				add(playerElement);
+			}};
+		}
+		else if (board.checkDraw ()) {
+			decisionList.add("DRAW");
+			return new ArrayList<String>() {{
+				add("DRAW");
+			}};
+		}
+		return decisionList;
 	}
 }
