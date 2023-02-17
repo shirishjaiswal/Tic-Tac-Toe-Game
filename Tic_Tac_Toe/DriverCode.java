@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class DriverCode {
 	public static Scanner sc = new Scanner (System.in);
 	public static void main(String[] args) {
-		//Start
 		System.out.println("===\tTIC  -  TAC  -  TOE\t===");
 		isPlay();
 	}
@@ -15,7 +14,8 @@ public class DriverCode {
 		
 		while (play.equals("1") || play.equals("PLAY")) {
 			System.out.println();
-			PreProcess start = new PreProcess();	//object that will initialize the game
+			//object that will initialize the game
+			PreProcess start = new PreProcess();
 			start.launch();
 			play = isvalid();
 		}
@@ -30,7 +30,8 @@ public class DriverCode {
 		while (!isValid) {
 			try {
 				play = sc.nextLine().toUpperCase();
-				if(!play.equals("1")  && !play.equals("PLAY") && !play.equals("2")  && !play.equals("EXIT")) System.out.print("Please select appropriate option :\t");
+				if(!play.equals("1")  && !play.equals("PLAY") && !play.equals("2")  && !play.equals("EXIT"))
+					System.out.print("Please select appropriate option :\t");
 				else isValid = true;
 			}
 			catch (Exception e) {
