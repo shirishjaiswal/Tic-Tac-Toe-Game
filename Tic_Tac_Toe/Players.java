@@ -13,7 +13,7 @@ public class Players {
 		this.name = name;
 		this.element = element;
 	}
-	//setting name
+
 	public void setName(int playerIdx) {
 		this.name = "";
 		System.out.print("Enter player - " + (playerIdx) + " name \t\t:\t");
@@ -22,7 +22,6 @@ public class Players {
 		}
 	}
 	
-	//setting Element (X or O)
 	public void setElement() {
 		String element = "";
 		while (true) {
@@ -32,16 +31,15 @@ public class Players {
 		}
 		this.element = element;
 	}
+	
 	public void setElement(String element) {
 		this.element = element;
 	}
 	
-	//getting name
 	public String getName() {
 		return this.name;
 	}
 	
-	//getting Element (X or O)
 	public String getElement() {
 		return this.element;
 	}
