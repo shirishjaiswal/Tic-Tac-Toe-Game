@@ -16,7 +16,7 @@ public class PreProcess {
 		return;
 	}
 //	selecting option to play in which mode
-	public void startGame () {
+	private void startGame () {
 		System.out.println("Select Playing Mode");
 		System.out.println("1\t-\tSolo Playing");
 		System.out.println("2\t-\tTwo-Player");
