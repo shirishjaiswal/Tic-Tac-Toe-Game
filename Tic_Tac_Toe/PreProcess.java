@@ -57,7 +57,7 @@ public class PreProcess {
 		System.out.println("\nRule 1 : Each two digit number means a cell \n"
 				+ "Rule 2 : Enter that number where you want to place your tool\n"
 				+ "Rule 3 : At any point of game enter RESET to reset the game\n" 
-				+ "\nPress any Key to Continue  -->");
+				+ "\nPress Enter Key to Continue  -->");
 		sc.nextLine();sc.nextLine();
 	}
 	
