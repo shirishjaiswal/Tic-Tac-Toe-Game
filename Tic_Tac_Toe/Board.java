@@ -13,10 +13,10 @@ public class Board {
 	
 	//setBoardSize
 	public void setBoardSize () {
-		System.out.print("Board size availabe : 3 (Recommended) and 5\nEnter boardSize \t:\t");
+		System.out.print("Board size availabe : 3 (Recommended) and 4\nEnter boardSize \t:\t");
 		setSizeTry();
-		while (this.boardSize != 3 && this.boardSize != 5) {
-			System.out.println("Sorry more the board size You get bored of playing\nSelect from 3 and 5");
+		while (this.boardSize != 3 && this.boardSize != 4) {
+			System.out.println("Sorry more the board size You get bored of playing\nSelect from 3 and 4");
 			setSizeTry();
 		}
 		createBoard();
