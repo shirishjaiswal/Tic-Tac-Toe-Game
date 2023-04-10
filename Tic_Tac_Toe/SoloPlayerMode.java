@@ -15,16 +15,16 @@ public class SoloPlayerMode extends TwoPlayerMode{
 	
 	private void setCornorMidElements() {
 		int n = board.getBoardLength();
-        midCornorElement = new ArrayList<>();
-        midCornorElement.add("00");
-        String s = "0"+ (n-1) + "";
-        midCornorElement.add(s);
-        s = (n-1) + "0";
-        midCornorElement.add(s);
-        s = (n-1)+""+(n-1);
-        midCornorElement.add(s);
-        s = (n/2) +""+(n/2);
-        midCornorElement.add(s);
+		midCornorElement = new ArrayList<>();
+		midCornorElement.add("00");
+		String s = "0"+ (n-1) + "";
+		midCornorElement.add(s);
+		s = (n-1) + "0";
+		midCornorElement.add(s);
+		s = (n-1)+""+(n-1);
+		midCornorElement.add(s);
+		s = (n/2) +""+(n/2);
+		midCornorElement.add(s);
 	}
 	
 	private ArrayList<String> run() {
