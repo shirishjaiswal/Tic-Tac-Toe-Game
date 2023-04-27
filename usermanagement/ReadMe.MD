@@ -2,7 +2,7 @@
 # FrameWork : Spring
 
 ## About 	:
-- This Project is User Management System whic will help to store the date of the user with some personal Information.
+- This Project is User Management System which will help to store the date of the user with some personal Information.
 - This is developed in Java, using **OOPs**, **Spring framework**.
 - The dependencies used are :
   * Spring Web
