@@ -1,4 +1,4 @@
-# **Module Clearance Test**
+# **Project About**
 ## **Name :-** Recipe Management System API
 ## **Framework :-** Spring
 ## **Language :-** Java
